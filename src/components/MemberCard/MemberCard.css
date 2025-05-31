@@ -1,0 +1,117 @@
+.member-card {
+  background-color: var(--background-light);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: all var(--transition-speed);
+  position: relative;
+  border: 1px solid var(--border-color);
+}
+
+.member-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.member-header {
+  padding: var(--spacing-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.member-info {
+  flex: 1;
+}
+
+.member-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+  color: var(--text-primary);
+}
+
+.member-role {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.member-actions {
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+.action-button {
+  background: none;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: all var(--transition-speed);
+  padding: 0;
+}
+
+.action-button.edit:hover {
+  background-color: var(--primary-light);
+  color: white;
+}
+
+.action-button.delete {
+  color: var(--text-secondary);
+}
+
+.action-button.delete:hover,
+.action-button.delete.confirm {
+  background-color: var(--error-color);
+  color: white;
+}
+
+.action-button.cancel:hover {
+  background-color: var(--text-light);
+  color: white;
+}
+
+.member-content {
+  padding: var(--spacing-md);
+  background-color: var(--background-light);
+}
+
+.member-tasks h4 {
+  margin-bottom: var(--spacing-sm);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.member-tasks ul {
+  list-style-position: inside;
+  padding-left: var(--spacing-sm);
+  color: var(--text-secondary);
+}
+
+.member-tasks li {
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.4;
+}
+
+.no-tasks {
+  color: var(--text-light);
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .member-header {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+  .member-actions {
+    align-self: flex-end;
+  }
+}
